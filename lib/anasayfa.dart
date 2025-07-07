@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:taskly_anasayfa/calendar.dart';
+import 'package:taskly_anasayfa/profil.dart';
 
 class Anasayfa extends StatefulWidget {
   const Anasayfa({super.key});
@@ -1114,7 +1116,7 @@ class _AnasayfaState extends State<Anasayfa> {
               IconButton(
                 icon: Icon(Icons.calendar_today, color: Colors.deepPurple),
                 onPressed: () {
-                  // Arama butonu
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => const Calendar()));
                 },
               ),
               SizedBox(width: 40),
@@ -1126,7 +1128,7 @@ class _AnasayfaState extends State<Anasayfa> {
               IconButton(
                 icon: Icon(Icons.person, color: Colors.deepPurple),
                 onPressed: () {
-                  // Profil butonu
+                  Navigator.push(context, MaterialPageRoute(builder: (context) =>const Profil()));
                 },
               ),
 
